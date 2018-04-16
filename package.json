@@ -1,0 +1,11 @@
+{
+  "name": "api.imie_job_dating",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Le-Lutin/api.imie_job_dating.git",
+  "author": "EBDB",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
