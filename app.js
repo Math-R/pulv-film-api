@@ -18,20 +18,21 @@ app.use('/api', router)
 
 app.listen(port)
 
-console.log('je suis sur le port'+port)
+console.log('je suis sur le port ' + port)
 
 const mysql = require('mysql')
 
 var connection = mysql.createConnection({
     host     : process.env.DB_HOST,
-    user     :  process.env.DB_USER,
-    password :  process.env.DB_PASS,
-    database : process.env.DB_PATH
-  });
+    user     : process.env.DB_USER,
+    password : process.env.DB_PASS,
+    database : process.env.DB_PATH,
+    port     : process.env.DB_PORT
+})
 
-  connection.connect(()=>console.log('connecté'))
+connection.connect(() => console.log('connecté'))
 
-connection.query('SELECT * FROM Administrator', function(err,res){
-    if (err)throw err;
+connection.query('SELECT * FROM User', function(err,res){
+    if (err) throw err
     console.log(res)
 })
