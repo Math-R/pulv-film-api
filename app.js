@@ -1,38 +1,24 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
+const cors = require('cors')
+const mysql = require('mysql')
+connection = require('./connection.js')
+const routes = require('./routes/routes')
 require('dotenv').config()
-
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
-
+//Set Port for API
 const port = process.env.port || 3000
 
+//Init Router
 const router = express.Router()
 
-router.get('/', function(req, res) {
-    res.json({ message: 'hooray! welcome to our api!' });   
-})
-
-app.use('/api', router)
+app.use(cors())
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+app.use(function (req, res, next) {
+    console.log('Time:', Date.now());
+    next();
+  });
+app.use('/api',routes)
 
 app.listen(port)
-
-console.log('je suis sur le port ' + port)
-
-const mysql = require('mysql')
-
-var connection = mysql.createConnection({
-    host     : process.env.DB_HOST,
-    user     : process.env.DB_USER,
-    password : process.env.DB_PASS,
-    database : process.env.DB_PATH,
-    port     : process.env.DB_PORT
-})
-
-connection.connect(() => console.log('connecté'))
-
-connection.query('SELECT * FROM User', function(err,res){
-    if (err) throw err
-    console.log(res)
-})
