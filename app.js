@@ -1,11 +1,20 @@
 const express = require('express')
 const app = express()
+const bodyParser = require('body-parser')
 
-// respond with "hello world" when a GET request is made to the homepage
-app.get('/', function(req, res) {
-    res.send('hello world')
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+
+const port = process.env.port || 3000
+
+const router = express.Router()
+
+router.get('/', function(req, res) {
+    res.json({ message: 'hooray! welcome to our api!' });   
 })
 
-app.listen(3000, function () {
-    console.log('Example app listening on port 3000!')
-})
+app.use('/api', router)
+
+app.listen(port)
+
+console.log('je suis sur le port'+port)
