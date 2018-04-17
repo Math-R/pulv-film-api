@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
+require('dotenv').config()
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
@@ -24,9 +25,13 @@ const mysql = require('mysql')
 var connection = mysql.createConnection({
     host     : process.env.DB_HOST,
     user     :  process.env.DB_USER,
-    password :  process.env.DB_PASS
+    password :  process.env.DB_PASS,
+    database : process.env.DB_PATH
   });
 
-  connection.connect()
+  connection.connect(()=>console.log('connecté'))
 
-  
+connection.query('SELECT * FROM Administrator', function(err,res){
+    if (err)throw err;
+    console.log(res)
+})
