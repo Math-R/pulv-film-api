@@ -40,7 +40,7 @@ module.exports= {
         connection.query('INSERT INTO User SET?',data,
             function(error,result){
                 if(error)throw error
-                res.status(200).send('User added')
+                res.status(200).send(result)
             }
         )
     }
