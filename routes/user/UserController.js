@@ -1,11 +1,12 @@
 const connection = require('../../connection.js')
-
+const joi = require('joi')
+const userSchema = require('../../models/User')
 
 module.exports= {
     getAllUsers : (req, res) =>{
         connection.query('SELECT * FROM User', function(error,result){
             if (error) throw error
-            res.status(200).send(result)            
+            res.status(200).send(result)     
         })
     },
     getUser: (req, res) =>{
@@ -13,10 +14,35 @@ module.exports= {
         connection.query(
             'SELECT * FROM User WHERE id_user ='+id+'',
             function(error,result){
-                if (error)throw error
-                res.status(200).send(result)
+                if (error){
+                    res.status(404).send('There is no such user here !')
+                }
+                else if(result.length <1){
+                    res.status(204).send('No content')
+                }
+                else{
+                    res.status(200).send(result)
+                }
+            }
+        )
+    },
+    deleteUser:(req, res) =>{
+        const {id}=req.params
+        connection.query('DELETE FROM User WHERE id_user ='+id+'', function(error,result){
+            if(error){
+                res.status(404).send('User not found')
+            }else{
+                res.status(200).send('User deleted')}
+        })
+    },
+    createUser:(req,res) =>{
+        const data = req.body
+        connection.query('INSERT INTO User SET?',data,
+            function(error,result){
+                if(error)throw error
+                res.status(200).send('User added')
             }
         )
     }
-    
 }
+    
