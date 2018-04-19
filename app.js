@@ -4,6 +4,7 @@ const session = require('express-session')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const mysql = require('mysql')
+const passport = require('passport')
 connection = require('./connection.js')
 const routes = require('./routes/routes')
 require('dotenv').config()
@@ -20,6 +21,7 @@ app.use(function (req, res, next) {
     console.log('Time:', Date.now());
     next();
   });
+
 app.use('/api',routes)
 
 app.listen(port)

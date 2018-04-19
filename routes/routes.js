@@ -2,11 +2,14 @@ const express = require('express');
 const router = express.Router();
 const UserCtrl = require('./user/UserController')
 const BusinessCtrl = require('./business/BusinessController')
+const LoginCtrl = require('./login/LoginController')
 const userSchema = require('../models/user')
 const bodyParser = require('body-parser')
 const {validateBody} = require('../middlewares/validation')
 
 //Routes
+//Login
+router.route('/login').post(LoginCtrl.login)
 //User routes
 router.route('/user').get(UserCtrl.getAllUsers)
 router.route('/user/:id').get(UserCtrl.getUser)
