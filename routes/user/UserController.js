@@ -43,6 +43,15 @@ module.exports= {
                 res.status(200).send(result)
             }
         )
+    },
+    ChoiceUserCandidate:(req,res) => {
+        const {id}=req.params
+        connection.query('INSERT INTO Candidate (id_user) VALUES ('+id+')',
+            function(error, result) {
+                if(error)throw error
+                res.status(200).send(result)
+            }
+        )
     }
 }
     

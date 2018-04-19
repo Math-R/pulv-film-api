@@ -13,6 +13,9 @@ router.route('/user/:id').get(UserCtrl.getUser)
 router.route('/user/:id').delete(UserCtrl.deleteUser)
 router.route('/user').post(UserCtrl.createUser)
 
+//Choice routes
+router.route('/choice/:id').post(UserCtrl.ChoiceUserCandidate)
+
 //Recruiter routes
 
 //Business routes
