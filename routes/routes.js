@@ -15,6 +15,7 @@ router.route('/user').post(UserCtrl.createUser)
 
 //Choice routes
 router.route('/choice/:id').post(UserCtrl.ChoiceUserCandidate)
+router.route('/choose-recruiter/:id').post(UserCtrl.ChoiceUserRecruiter)
 
 //Recruiter routes
 

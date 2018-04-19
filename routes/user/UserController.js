@@ -52,6 +52,16 @@ module.exports= {
                 res.status(200).send(result)
             }
         )
+    },
+    ChoiceUserRecruiter:(req,res) => {
+        const {id}=req.params
+        const {id_business}=req.body
+        connection.query('INSERT INTO Recruiter (id_user, id_business) VALUES (\''+id+'\',\''+id_business+'\')',
+            function(error, result) {
+                if(error)throw error
+                res.status(200).send(result)
+            }
+        )
     }
 }
     
