@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const UserCtrl = require('./user/UserController')
+const BusinessCtrl = require('./business/BusinessController')
 const userSchema = require('../models/user')
 const bodyParser = require('body-parser')
 const {validateBody} = require('../middlewares/validation')
@@ -13,6 +14,12 @@ router.route('/user/:id').delete(UserCtrl.deleteUser)
 router.route('/user').post(UserCtrl.createUser)
 
 //Recruiter routes
-module.exports = router;
 
-//validateBody(userSchema),
+//Business routes
+router.route('/business').get(BusinessCtrl.getAllBusiness)
+router.route('/business/:id').get(BusinessCtrl.getBusiness)
+router.route('/business/:id').delete(BusinessCtrl.deleteBusiness)
+router.route('/business').post(BusinessCtrl.createBusiness)
+
+//Export router to access it in app
+module.exports = router;
