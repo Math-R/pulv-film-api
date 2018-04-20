@@ -3,6 +3,7 @@ const router = express.Router();
 const UserCtrl = require('./user/UserController')
 const BusinessCtrl = require('./business/BusinessController')
 const LoginCtrl = require('./login/LoginController')
+const OfferCtrl = require('./offer/OfferController')
 const userSchema = require('../models/user')
 const bodyParser = require('body-parser')
 const {validateBody} = require('../middlewares/validation')
@@ -27,6 +28,9 @@ router.route('/business').get(BusinessCtrl.getAllBusiness)
 router.route('/business/:id').get(BusinessCtrl.getBusiness)
 router.route('/business/:id').delete(BusinessCtrl.deleteBusiness)
 router.route('/business').post(BusinessCtrl.createBusiness)
+
+//Offer routes
+router.route('/offer').get(OfferCtrl.getAllOffers)
 
 //Export router to access it in app
 module.exports = router;
