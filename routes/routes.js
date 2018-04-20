@@ -10,10 +10,12 @@ const CandidateCtrl = require('./Candidate/CandidateController')
 const userSchema = require('../models/user')
 const bodyParser = require('body-parser')
 const {validateBody} = require('../middlewares/validation')
+const ProfileController = require('./Profile/ProfileController')
 
 //Routes
 //Login
 router.route('/login').post(LoginCtrl.login)
+router.route('/login').get(LoginCtrl.isCandidate)
 //User routes
 router.route('/user').get(UserCtrl.getAllUsers)
 router.route('/user/:id').get(UserCtrl.getUser)
@@ -45,5 +47,8 @@ router.route('/admin/:id').get(AdminCtrl.getAdmin)
 //Recruiter routes
 router.route('/recruiter').get(RecruiterCtrl.getAllRecruiters)
 router.route('/recruiter/:id').get(RecruiterCtrl.getRecruiter)
+//Profile routes
+router.route('/Profile').get(getSkill.ProfileController)
+
 //Export router to access it in app
 module.exports = router;
