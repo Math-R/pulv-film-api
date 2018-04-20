@@ -15,7 +15,7 @@ module.exports= {
             'SELECT * FROM User WHERE id_user ='+id+'',
             function(error,result){
                 if (error){
-                    res.status(404).send('There is no such user here !')
+                    res.status(405).send('There is no such user here !')
                 }
                 else if(result.length <1){
                     res.status(204).send('No content')

@@ -4,6 +4,9 @@ const UserCtrl = require('./user/UserController')
 const BusinessCtrl = require('./business/BusinessController')
 const LoginCtrl = require('./login/LoginController')
 const OfferCtrl = require('./offer/OfferController')
+const AdminCtrl = require('./Admin/AdminController')
+const RecruiterCtrl = require('./Recruiter/RecruiterController')
+const CandidateCtrl = require('./Candidate/CandidateController')
 const userSchema = require('../models/user')
 const bodyParser = require('body-parser')
 const {validateBody} = require('../middlewares/validation')
@@ -32,5 +35,15 @@ router.route('/business').post(BusinessCtrl.createBusiness)
 //Offer routes
 router.route('/offer').get(OfferCtrl.getAllOffers)
 
+//Candidate routes
+router.route('/candidate').get(CandidateCtrl.getAllCandidates)
+router.route('/candidate/:id').get(CandidateCtrl.getCandidate)
+
+//Admin routes
+router.route('/admin').get(AdminCtrl.getAllAdmins)
+router.route('/admin/:id').get(AdminCtrl.getAdmin)
+//Recruiter routes
+router.route('/recruiter').get(RecruiterCtrl.getAllRecruiters)
+router.route('/recruiter/:id').get(RecruiterCtrl.getRecruiter)
 //Export router to access it in app
 module.exports = router;
