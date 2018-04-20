@@ -34,6 +34,7 @@ router.route('/business').post(BusinessCtrl.createBusiness)
 
 //Offer routes
 router.route('/offer').get(OfferCtrl.getAllOffers)
+router.route('/offer-candidates/:id').get(OfferCtrl.getOfferCandidates)
 
 //Candidate routes
 router.route('/candidate').get(CandidateCtrl.getAllCandidates)
