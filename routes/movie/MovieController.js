@@ -5,5 +5,10 @@ module.exports= {
         knex.select().from('movies').then(result => res.send(result))
             .catch(next)
     },
+    getMovie : (req, res, next) =>{
+        const {id} = req.params
+        knex.where('id', id).select().from('movies').then(result => res.send(result))
+            .catch(next)
+    },
 }
 
