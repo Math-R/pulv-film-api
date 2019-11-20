@@ -1,0 +1,10 @@
+insert into series_genres (series_id, genres_id) values (1, 2);
+insert into series_genres (series_id, genres_id) values (2, 10);
+insert into series_genres (series_id, genres_id) values (3, 3);
+insert into series_genres (series_id, genres_id) values (4, 2);
+insert into series_genres (series_id, genres_id) values (5, 4);
+insert into series_genres (series_id, genres_id) values (6, 7);
+insert into series_genres (series_id, genres_id) values (7, 7);
+insert into series_genres (series_id, genres_id) values (8, 4);
+insert into series_genres (series_id, genres_id) values (9, 6);
+insert into series_genres (series_id, genres_id) values (10, 1);

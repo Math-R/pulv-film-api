@@ -1,0 +1,10 @@
+insert into movies_genres (movies_id, genres_id) values (1, 10);
+insert into movies_genres (movies_id, genres_id) values (2, 2);
+insert into movies_genres (movies_id, genres_id) values (3, 4);
+insert into movies_genres (movies_id, genres_id) values (4, 2);
+insert into movies_genres (movies_id, genres_id) values (5, 1);
+insert into movies_genres (movies_id, genres_id) values (6, 7);
+insert into movies_genres (movies_id, genres_id) values (7, 7);
+insert into movies_genres (movies_id, genres_id) values (8, 8);
+insert into movies_genres (movies_id, genres_id) values (9, 6);
+insert into movies_genres (movies_id, genres_id) values (10, 1);
