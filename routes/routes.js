@@ -10,6 +10,7 @@ const SeriesCtrl = require('./serie/SerieController');
 router.route('/movies').get(MoviesCtrl.getAllMovies);
 router.route('/series').get(SeriesCtrl.getAllSeries);
 router.route('/series/:id').get(SeriesCtrl.getSerie);
+router.route('/order/:col/series').get(SeriesCtrl.getAllSeriesByNames);
 
 
 
