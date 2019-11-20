@@ -6,7 +6,7 @@ module.exports= {
             if (error) throw error
             res.status(200).send(result)
         })*/
-        knex.select().from('movies')
+        res.status(200).send(knex.select().from('movies'))
     },
 }
 
