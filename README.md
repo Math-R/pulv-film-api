@@ -6,11 +6,13 @@ This is a student project to test creation of a REST API in JS with express and 
 
 ## Run the project
 
-To launch the API use those commands :
+To launch the API you have to :
 
-- npm install
-- copy/paste .env file and update db variables
-- npm run start
+- run `npm install`
+- create `fake_film` database
+- import `db_update.sql` into fake_film database
+- copy/paste `.env` file and update db variables
+- run `npm run start`
 
 ## Endpoints
 
