@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const MoviesCtrl = require('./movie/MovieController');
 const SeriesCtrl = require('./serie/SerieController');
+const FilterCtrl = require('./filter/FilterController');
 
 //Routes
 //Login
@@ -10,7 +11,7 @@ const SeriesCtrl = require('./serie/SerieController');
 router.route('/movies').get(MoviesCtrl.getAllMovies);
 router.route('/series').get(SeriesCtrl.getAllSeries);
 router.route('/series/:id').get(SeriesCtrl.getSerie);
-router.route('/order/:col/series').get(SeriesCtrl.getAllSeriesByNames);
+router.route('/order/:col/:table').get(FilterCtrl.getInfoByNames);
 
 
 

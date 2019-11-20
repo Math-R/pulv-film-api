@@ -10,10 +10,5 @@ module.exports= {
         knex.where('id', id).select().from('series').then(result => res.send(result))
             .catch(next)
     },
-    getAllSeriesByNames: (req, res, next) =>{
-        const {col} = req.params
-        knex('series').orderBy(col, 'asc').then(result => res.send(result))
-        .catch(next)
-},
 }
 
