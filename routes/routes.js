@@ -24,7 +24,7 @@ router.route('/genres/movies/:id').get(GenresCtrl.getMovieGenre);
 router.route('/genres/:id/:table?').get(GenresCtrl.getGenre);
 //Filter routes
 router.route('/order/:table/:col?/:order?').get(FilterCtrl.getOrder);
-router.route('/search/:table/:search?/:col?').get(FilterCtrl.getInfoWithSearch);
+router.route('/search/:table/:search/:col?').get(FilterCtrl.getInfoWithSearch);
 
 
 
