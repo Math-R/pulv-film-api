@@ -1,8 +1,8 @@
 {
-  "name": "api.imie_job_dating",
+  "name": "pulv-films-api",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/Le-Lutin/api.imie_job_dating.git",
+  "repository": "https://github.com/Math-R/pulv-film-api",
   "author": "EBDB",
   "license": "MIT",
   "dependencies": {
@@ -11,12 +11,9 @@
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
-    "joi": "^13.2.0",
     "morgan": "^1.9.0",
     "mysql": "^2.15.0",
-    "nodemon": "^1.17.3",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0"
+    "nodemon": "^1.17.3"
   },
   "scripts": {
     "dev": "node ./app.js",

@@ -1,10 +1,8 @@
 const express = require('express')
 const app = express()
-const session = require('express-session')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const mysql = require('mysql')
-const passport = require('passport')
+
 connection = require('./connection.js')
 const routes = require('./routes/routes')
 require('dotenv').config()

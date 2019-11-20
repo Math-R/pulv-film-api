@@ -1,12 +1,10 @@
 const connection = require('../../connection.js')
-const joi = require('joi')
-const userSchema = require('../../models/User')
 
 module.exports= {
     getAllUsers : (req, res) =>{
         connection.query('SELECT * FROM User', function(error,result){
             if (error) throw error
-            res.status(200).send(result)     
+            res.status(200).send(result)
         })
     },
     getUser: (req, res) =>{
@@ -63,4 +61,4 @@ module.exports= {
         )
     }
 }
-    
+
