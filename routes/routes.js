@@ -11,7 +11,7 @@ const FilterCtrl = require('./filter/FilterController');
 router.route('/movies').get(MoviesCtrl.getAllMovies);
 router.route('/series').get(SeriesCtrl.getAllSeries);
 router.route('/series/:id').get(SeriesCtrl.getSerie);
-router.route('/order/:col/:table').get(FilterCtrl.getInfoByNames);
+router.route('/order/:table/:col?/:order?').get(FilterCtrl.getInfoByNames);
 
 
 
