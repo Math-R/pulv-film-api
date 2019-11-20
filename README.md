@@ -1,6 +1,6 @@
 # 🎬 Welcome to FakeFlixAPI !
 
-This is a student project to test creation of a REST API in JS with express and knex. This is an API from a fake Netflix witch return movies, series, episodes and genres in JSON
+This is a student project to test the creation of a REST API in JS with express and knex. This is an API of a fake Netflix that returns movies, series, episodes and genres in JSON
 
 > **Base API url :** localhost:3000/api
 
