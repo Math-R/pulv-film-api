@@ -1,15 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const UserCtrl = require('./user/UserController');
-const LoginCtrl = require('./login/LoginController');
-const bodyParser = require('body-parser');
-const knex = require('../query.js');
+const MoviesCtrl = require('./movie/MovieController');
+const SeriesCtrl = require('./serie/SerieController');
 
 //Routes
 //Login
 // router.route('/login').post(LoginCtrl.login);
 //User routes
-router.route('/movies').get(UserCtrl.getAllUsers);
+router.route('/movies').get(MoviesCtrl.getAllMovies);
+router.route('/series').get(SeriesCtrl.getAllSeries);
+router.route('/series/:id').get(SeriesCtrl.getSerie);
 
 
 
