@@ -1,10 +1,10 @@
-# Welcome to FakeFlixAPI !
+# 🎬 Welcome to FakeFlixAPI !
 
 This is a student project to test creation of a REST API in JS with express and knex. This is an API from a fake Netflix witch return movies, series, episodes and genres in JSON
 
 > **Base API url :** localhost:3000/api
 
-## Run the project
+## 💻 Run the project
 
 To launch the API you have to :
 
@@ -14,7 +14,7 @@ To launch the API you have to :
 - copy/paste `.env` file and update db variables
 - run `npm run start`
 
-## Endpoints
+## 📖 Endpoints
 
 |ENDPOINT                |PARAM                          |DESCRIPTION                         |
 |----------------|-------------------------------|-----------------------------|
