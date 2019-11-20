@@ -26,3 +26,8 @@ To launch the API you have to :
 ||`genres/:type/:id`|return genres of a serie or movie|
 |order|`/order/:type/:column/:order`|return series, movies, episodes or genres order by id / `:column` is an optional parameter defining the column to be sorted (default : id) / `:order` is an optional parameter defining the sort order (default : asc) |
 |search|`/search/:type/:search/:column`|return series, movies, episodes or genres containing the search / `:search` is the parameter defining the string or number you looking for / `:column` is an optional parameter that defines the column in which to search (default : name) |
+
+## 🤝 Author
+
+[@Math-R](https://github.com/Math-R)  
+[@DorianMB](https://github.com/DorianMB)
