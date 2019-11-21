@@ -31,3 +31,4 @@ To launch the API you have to :
 
 [@Math-R](https://github.com/Math-R)  
 [@DorianMB](https://github.com/DorianMB)
+[@nicolas-pm](https://github.com/nicolas-pm)
